@@ -151,31 +151,6 @@
 		};
 	};
 
-	dmsc: system-controller@44043000 {
-		compatible = "ti,k2g-sci";
-		ti,host-id = <12>;
-		mbox-names = "rx", "tx";
-		mboxes= <&secure_proxy_main 12>,
-			<&secure_proxy_main 13>;
-		reg-names = "debug_messages";
-		reg = <0x00 0x44043000 0x00 0xfe0>;
-
-		k3_pds: power-controller {
-			compatible = "ti,sci-pm-domain";
-			#power-domain-cells = <2>;
-		};
-
-		k3_clks: clock-controller {
-			compatible = "ti,k2g-sci-clk";
-			#clock-cells = <2>;
-		};
-
-		k3_reset: reset-controller {
-			compatible = "ti,sci-reset";
-			#reset-cells = <2>;
-		};
-	};
-
 	crypto: crypto@40900000 {
 		compatible = "ti,am62-sa3ul";
 		reg = <0x00 0x40900000 0x00 0x1200>;

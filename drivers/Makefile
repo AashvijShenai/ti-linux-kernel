@@ -6,6 +6,8 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+obj-$(CONFIG_MAILBOX)		+= mailbox/
+obj-y				+= firmware/
 obj-y				+= irqchip/
 obj-y				+= bus/
 
@@ -132,7 +134,6 @@ obj-y				+= mmc/
 obj-$(CONFIG_MEMSTICK)		+= memstick/
 obj-$(CONFIG_NEW_LEDS)		+= leds/
 obj-$(CONFIG_INFINIBAND)	+= infiniband/
-obj-y				+= firmware/
 obj-$(CONFIG_CRYPTO)		+= crypto/
 obj-$(CONFIG_SUPERH)		+= sh/
 ifndef CONFIG_ARCH_USES_GETTIMEOFFSET
@@ -152,7 +153,6 @@ obj-$(CONFIG_GREYBUS)		+= greybus/
 obj-$(CONFIG_STAGING)		+= staging/
 obj-y				+= platform/
 
-obj-$(CONFIG_MAILBOX)		+= mailbox/
 obj-$(CONFIG_HWSPINLOCK)	+= hwspinlock/
 obj-$(CONFIG_REMOTEPROC)	+= remoteproc/
 obj-$(CONFIG_RPMSG)		+= rpmsg/
